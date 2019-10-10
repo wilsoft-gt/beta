@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Raleway&display=swap');
+/* font-family: 'Big Shoulders Display', cursive;
+font-family: 'Raleway', sans-serif; */
+
+/* *{
+    border: red 1px dotted;
+} */
+
+:root {
+    --color11: rgba(113, 167, 255, 0.95);
+    --color12: rgba(255, 121, 138, 0.95);
+
+    --color21: rgba(5, 56, 107, 0.95);
+    --color22: rgba(55, 150, 131, 0.95);
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* ############################# */
+
+/* Div central con info sobre mi */
+
+/* ############################# */
+
+#maindiv {
+    font-family: 'Big Shoulders Display', cursive;
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#profilePic {
+    margin: 0em;
+    height: 15em;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.75);
+}
+
+#resumeContainer {
+    width: 75%;
+    margin: 0 0 3em 0;
+    ;
+}
+
+/* Titulo principal en el div central */
+
+#maindiv h1 {
+    margin: 0;
+    letter-spacing: 0.40em;
+    font-size: 3em;
+    text-shadow: 0px 0px 4px rgb(0, 0, 0);
+}
+
+/* estilo para el texto que cambia en el div central */
+
+#maindiv p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.25em;
+}
+
+#mainFooter {
+    font-family: 'Big Shoulders Display', cursive;
+    position: absolute;
+    font-weight: bolder;
+    font-size: 0.75em;
+    bottom: 0;
+}
+
+/* ##################################### */
+
+/* Div contenedor de los div secundarios */
+
+/* ##################################### */
+
+#backcontainer {
+    z-index: 1;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+/* ################################ */
+/* Div contenedor del div Izquierdo */
+/* ################################ */
+
+/* Estilo del div que controla la parte izquierda */
+
+#back1 {
+    transform: translateX(-50%);
+    width: 100vw;
+    z-index: 13;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#back1Text {
+    display: none;
+    flex-direction: column;
+    color: #ffffffff;
+    margin-left: 15%;
+    border-radius: 15px;
+    transition: ease-in-out 0.2s opacity;
+    padding: 5em;
+    z-index: 76;
+    width: 50%;
+    background-color: rgba(5, 56, 107, 0.80);
+    -webkit-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.75);
+}
+
+#mainColor1 {
+    background-color: var(--color22);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+/* ################################ */
+/* Div contenedor del div Derecho   */
+/* ################################ */
+
+/* Estilo que controla la parte derecha (arte) */
+
+#back2 {
+    transform: translateX(-50%);
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#mainColor2 {
+    background-color:var(--color21);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* div con info sobre la seccion derecha (arte) */
+
+#back2Text {
+    display: none;
+    flex-direction: column;
+    color: #ffffffff;
+    margin-right: 15%;
+    border-radius: 15px;
+    transition: ease-in-out 0.2s opacity;
+    padding: 5em;
+    z-index: 75;
+    width: 50%;
+    background-color: rgba(55, 150, 131, 0.95);;
+    -webkit-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 0px 20px -4px rgba(0, 0, 0, 0.75);
+}
+
+/* titulo de la info del div derecho (arte) */
+
+#back2Text h1, #back1Text h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 3em;
+    letter-spacing: 5px;
+}
+
+#back2Text p, #back2Text h1 {
+    text-align: right
+}
+
+/* texto del div de la parte derecha */
+
+#back2Text p, #back1Text p {
+    color: rgb(236, 236, 236);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.25em;
+}
+
+button {
+    font-family: 'Raleway', sans-serif;
+}
+
+#maindiv i {
+    font-size: 2em;
+    animation: 0.75s ease-in-out mousemove alternate infinite;
+    bottom: 0;
+    color: rgba(255, 255, 255,0.5);
+}
+
+#cursorAnim {
+    font-size: 0.7em;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+/* los frames para el icono de cursor */
+
+@keyframes mousemove {
+    from {
+        transform: translateX(-1em)
+    }
+    to {
+        transform: translateX(1em)
+    }
+}
+
+/* animated background */
+
+.scrolling {
+    width: 100%;
+    height: 100%;
+    opacity: 15%;
+}
+
+.abup {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -50;
+    top: 0;
+    left: 0;
+    background-image: url("../design/fondo\ programing.png");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    /*adjust s value for speed*/
+    animation: abup 500s linear infinite;
+}
+
+@keyframes abup {
+    from {
+        background-position: 0 0;
+    }
+    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+        background-position: 0 -10000px;
+    }
+}
+
+.abdown {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -50;
+    top: 0;
+    left: 0;
+    background: url("../design/background\ art.png");
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: auto 100%;
+    /*adjust s value for speed*/
+    animation: abdown 500s linear infinite;
+}
+
+@keyframes abdown {
+    from {
+        background-position: 0 0;
+    }
+    /*use negative width if you want it to flow right to left else and positive for left to right*/
+    to {
+        background-position: 0 10000px;
+    }
+}
+
+#playPause {
+    font-size: 1em;
+    position: absolute;
+    z-index: 500;
+    bottom: 0;
+    right: 0;
+    padding: 1em;
+    font-size: 1.25em;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+#playPause:hover {
+    color: rgb(255, 255, 255);
+    transition: ease-in-out 1s color;
+}

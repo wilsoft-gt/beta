@@ -1,0 +1,130 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>mouse position</title>
+    <!-- este es mi archivo de estilo -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Esto crea la magia de con el mouse -->
+    <script src="js/script_translate_X.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- iconos de fontawesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <!-- tipografias de googlefonts -->
+    <link href="https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Fira+Sans+Condensed" rel="stylesheet">
+    <!-- animaciones de animate.js -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+</head>
+<!-- Define el script que actua al mover el mouse sobre la pantalla -->
+
+<body onmousemove="myf()" onload="audiovol(0.3)">
+    <a onclick="playPause()" id="playPause" href="#"><i class='fas fa-volume-up'></i></a>
+    <audio autoplay loop id="audiosrc">
+        <source src="/design/backgroundsound.wav" type="audio/WAV"> 
+        Your browser do not support audio   
+    </audio>
+
+    <audio id="audiobutton">
+            <source src="/design/button.wav" type="audio/WAV"> 
+            Your browser do not support audio   
+        </audio>
+    <!-- div sobrepuesto al frente que muestra mi informacion -->
+    <div id="maindiv">
+        <img id="profilePic" src="img/profile.jpg" alt="Perfil">
+        <h1>wilson romero</h1>
+        <!-- the span sirve para mostrar el texto creado por typed.js -->
+        <p>Yo creo <span id="ptext"></span></p>
+
+        <!-- Texto acerca de mi -->
+        <div id="resumeContainer">
+            <p>Apacionado por la programacion y el diseño. Nací, creci y vivo en el bello pais de Guatemala. Un pais
+                repleto de naturaleza y bellas costumbres milenarias. Me encanta la cocina, la musica, las artes y la
+                programacion.</p>
+            <p>Actualmente estudio un Bachelor in Aplied Technology en la Brigham Young University Idaho (BYU-I) en
+                linea. Comence con la programacion web hace 3 años aproximadamente y desde ese tiempo he desarrollado
+                proyectos propios como ejercios para poner en practica mis conocimientos en HTML5, CSS y JavaScript.</p>
+            <p>En cuanto al diseño en 3d comence desde los 15 años aproximadamente porque aprender como desarrollar
+                videojuegos y fue cuando conocí Blender3D. Actualmente lo sigo utilizando en mis diseños en conjunto con
+                GIMP y otros software open source.</p>
+        </div>
+        <!-- animacion del mouse en modo instruccion para mostrar que debe hacer con el website -->
+        <div id="cursorAnim">
+            <i class="fas fa-angle-double-left">&MediumSpace;&MediumSpace;&MediumSpace;</i><i
+                class="fas fa-mouse-pointer"></i>&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;<i
+                class="fas fa-angle-double-right"></i>
+        </div>
+        <div id="mainFooter">
+            &copy; Wilson Romero 2019
+        </div>
+
+    </div>
+
+    <!-- div principal de fondo en donde tengo colocadas las dos secciones, website y arte. -->
+    <div id="backcontainer">
+
+        <!-- Seccion para web development (izquierda) -->
+        <div id="back1">
+            <!-- Div en donde se encuentra un poco de informacion sobre mi pagina de arte -->
+            <div id="back1Text">
+                <div id="artDescTextCont1">
+                    
+                    <h1><i class="fas fa-palette"></i>CG Design</h1>
+                    <p>Actualmente utilizo blender 3d para desarrollar modelos en 3d, ayudandome de algunas herramientas
+                        open source para texturizar los modelos. La mayoria de imagenes que he desarrollado son intentos
+                        de hacer algo fotorealista.</p>
+                </div>
+
+                <!-- boton para enviarme al website de arte -->
+                <a onmouseover="buttonPlay()" href="https://www.wilsonromero.design" onclick=""
+                    class="waves-effect waves-light btn" style="float: left; background-color: rgb(55, 150, 131) !important;">View portfolio</a>
+            </div>
+            <div id="mainColor1"></div>
+            <div class="abup scrolling"></div>
+        </div>
+
+        <!-- seccion para arte (derecha) -->
+        <div id="back2">
+            <!-- Div en donde se encuentra un poco de informacion sobre mi pagina de arte -->
+            <div id="back2Text">
+                <div id="artDescTextCont2">
+                    <h1><i class="fas fa-palette"></i>CG Design</h1>
+                    <p>Actualmente utilizo blender 3d para desarrollar modelos en 3d, ayudandome de algunas herramientas
+                        open source para texturizar los modelos. La mayoria de imagenes que he desarrollado son intentos
+                        de hacer algo fotorealista.</p>
+                </div>
+
+                <!-- boton para enviarme al website de arte -->
+                <a onmouseover="buttonPlay()" href="https://www.wilsonromero.design/art" onclick="btn()"
+                    class="waves-effect waves-light btn" style="float: right; background-color: rgb(5, 56, 107) !important;">View portfolio</a>
+            </div>
+            <div id="mainColor2"></div>
+            <div class="abdown scrolling"></div>
+
+        </div>
+    </div>
+
+    <!-- este script es para typed.js, las palabras dentro del objeto strings son las palabras que se escriben -->
+    <script>
+        var typed = new Typed('#ptext', {
+            strings: ["art", "websites", "amazing portfolios", "dreams", "records"],
+            typeSpeed: 30,
+            backSpeed: 30,
+            smartBackspace: true, // this is a default
+            loop: true
+        });
+
+
+    </script>
+</body>
+
+</html>
