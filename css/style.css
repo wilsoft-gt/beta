@@ -10,8 +10,8 @@ font-family: 'Raleway', sans-serif; */
     --color11: rgba(113, 167, 255, 0.95);
     --color12: rgba(255, 121, 138, 0.95);
 
-    --color21: rgba(5, 56, 107, 0.95);
-    --color22: rgba(55, 150, 131, 0.95);
+    --color21: rgba(5, 56, 107, 0.90);
+    --color22: rgba(55, 150, 131, 0.90);
 }
 
 body {
