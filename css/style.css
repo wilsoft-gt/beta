@@ -32,14 +32,15 @@ body {
     font-family: 'Big Shoulders Display', cursive;
     color: rgb(255, 255, 255);
     background-color: transparent;
-    height: 100%;
-    width: 100%;
     position: fixed;
+    height: 100vh;
+    width: 100vw;
     z-index: 15;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    transition: ease 1s;
 }
 
 #profilePic {
@@ -77,7 +78,7 @@ body {
 }
 
 #maindiv table {
-    width: 30%;
+    width: 75%;
 }
 
 td {
@@ -119,6 +120,7 @@ td {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    transition: ease 1s;
 }
 
 #back1Text {
@@ -156,6 +158,7 @@ td {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    transition: ease 1s;
 }
 
 #mainColor2 {
@@ -173,7 +176,7 @@ td {
     color: #ffffffff;
     margin-right: 15%;
     border-radius: 15px;
-    transition: ease-in-out 0.2s opacity;
+    transition: ease 0.2s opacity;
     padding: 5em;
     z-index: 75;
     width: 50%;
@@ -291,7 +294,7 @@ button {
 #playPause {
     font-size: 1em;
     position: absolute;
-    z-index: 500;
+    z-index: 2000;
     bottom: 0;
     right: 0;
     padding: 1em;
@@ -303,4 +306,99 @@ button {
 #playPause:hover {
     color: rgb(255, 255, 255);
     transition: ease-in-out 1s color;
+}
+
+#left {
+    height: 100%;
+    width: 5%;
+    z-index: 1500;
+    position: absolute;
+    left: 0;
+    display: flex;
+    align-items: center;
+    transition: ease 1s;
+    justify-content: center;
+}
+
+#webbutton {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: rgba(0,0,0,0.25);
+}
+
+#webbutton:hover {
+    background-color: rgba(0,0,0,0.25);
+    cursor: pointer;
+}
+
+#webbutton > span {
+    color: white;
+    display: inline-block;
+    transform: rotateZ(-90deg);
+}
+
+#right {
+    height: 100%;
+    width: 5%;
+    z-index: 1500;
+    position: absolute;
+    right: 0;
+    transition: ease 1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#artbutton {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background-color: rgba(0,0,0,0.25);
+}
+
+#artbutton > span {
+    color: white;
+    display: inline-block;
+    transform: rotateZ(90deg);
+
+}
+
+#webbutton:hover {
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+#artbutton:hover {
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+
+#mainmenu {
+    height: 8%;
+    width: 100%;
+    z-index: 1500;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    transition: ease 1s;
+    transform: translateY(100%);
+}
+
+#mainbutton {
+    height: 100%;
+    width: 100%;
+    border: none;
+    transition: ease 1s;
+    background-color: rgba(0,0,0,0.25);
+}
+
+#mainbutton > span {
+    color: white;
+    display: inline-block;
+}
+
+#mainbutton:hover {
+    background-color: rgba(0,0,0,0.5);
+    cursor: pointer;
 }

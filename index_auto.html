@@ -26,7 +26,7 @@
 </head>
 <!-- Define el script que actua al mover el mouse sobre la pantalla -->
 
-<body onload="audiovol(0.5)">
+<body onmousemove="myf()" onload="audiovol(0.5)">
     <a onclick="playPause()" id="playPause" href="#"><i class='fas fa-volume-up'></i></a>
     <audio loop id="audiosrc">
         <source src="https://github.com/wilsoft-gt/beta/blob/master/design/backgroundsound.wav?raw=true" type="audio/WAV"> 
@@ -38,22 +38,6 @@
             Your browser do not support audio   
         </audio>
     <!-- div sobrepuesto al frente que muestra mi informacion -->
-        <div id="left">
-            <button id="webbutton" onclick="rightDiv()">
-                <span>Web</span>
-            </button>
-        </div>
-        
-        <div id="right">
-            <button id="artbutton" onclick="leftDiv()">
-                <span>Art</span>
-            </button>
-        </div>
-        <div id="mainmenu">
-            <button id="mainbutton" onclick="mainDiv()">
-                <span>Main</span>
-            </button>
-        </div>
     <div id="maindiv">
         <img id="profilePic" src="img/profile.jpg" alt="Perfil">
         <h1>wilson romero</h1>
@@ -81,6 +65,12 @@
                     <td><a href="">Ver</a></td>
                 </tr>
             </table>
+        </div>
+        <!-- animacion del mouse en modo instruccion para mostrar que debe hacer con el website -->
+        <div id="cursorAnim">
+            <i class="fas fa-angle-double-left">&MediumSpace;&MediumSpace;&MediumSpace;</i><i
+                class="fas fa-mouse-pointer"></i>&MediumSpace;&MediumSpace;&MediumSpace;&MediumSpace;<i
+                class="fas fa-angle-double-right"></i>
         </div>
         <div id="mainFooter">
             &copy; Wilson Romero 2019
@@ -144,8 +134,6 @@
 
 
     </script>
-
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
 
 </html>
