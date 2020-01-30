@@ -131,7 +131,7 @@ function rightDiv(){
     document.getElementById('mainmenu').style.transform = 'translateY(0)';
     document.getElementById('left').style.transform = 'translateX(-100%)';
     document.getElementById('right').style.transform = 'translateX(0%)';
-    document.getElementById('mainbutton').style.transform = 'translateX(-5%)';
+    document.getElementById('mainbutton').style.transform = 'translateX(0%)';
     
 }
 
@@ -141,7 +141,7 @@ function leftDiv(){
     document.getElementById('maindiv').style.transform = 'translateY(-100%)';
     document.getElementById('maindiv').style.opacity = 0;
 
-    document.getElementById('mainmenu').style.transform = 'translateY(0)';
+    document.getElementById('mainmenu').style.transform = 'translateY(0%)';
     document.getElementById('mainbutton').style.transform = 'translateX(5%)';
     document.getElementById('left').style.transform = 'translateX(0%)';
     document.getElementById('right').style.transform = 'translateX(110%)';

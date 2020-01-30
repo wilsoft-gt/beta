@@ -5,7 +5,7 @@ font-family: 'Raleway', sans-serif; */
 /* *{
     border: red 1px dotted;
 } */
-
+ 
 :root {
     --color11: rgba(113, 167, 255, 0.95);
     --color12: rgba(255, 121, 138, 0.95);
@@ -14,13 +14,13 @@ font-family: 'Raleway', sans-serif; */
     --color22: rgba(55, 150, 131, 0.90);
 }
 
-body {
+body ,html{
     width: 100%;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
+    height: 100%;
+    position: fixed;
+
 }
+
 
 /* ############################# */
 
@@ -28,24 +28,33 @@ body {
 
 /* ############################# */
 
+
 #maindiv {
     font-family: 'Big Shoulders Display', cursive;
     color: rgb(255, 255, 255);
-    background-color: transparent;
     position: fixed;
-    height: 100vh;
-    width: 100vw;
-    z-index: 15;
+    height: 100%;
+    z-index: 200;
+    transition: ease 1s;
+    display: flex;
+    align-items: center;
+}
+
+#scrollable {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 90%;
+    margin: 0 15%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    transition: ease 1s;
+    text-align: center;
+    
 }
 
 #profilePic {
-    margin: 0em;
     height: 10em;
+    width: auto;
     border-radius: 50%;
     -webkit-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 20px -4px rgba(0,0,0,0.75);
@@ -53,8 +62,7 @@ body {
 }
 
 #resumeContainer {
-    width: 75%;
-    margin: 0 0 3em 0;
+    font-size: 1.3em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,9 +72,7 @@ body {
 /* Titulo principal en el div central */
 
 #maindiv h1 {
-    margin: 0;
     letter-spacing: 0.40em;
-    font-size: 3em;
     text-shadow: 0px 0px 4px rgb(0, 0, 0);
 }
 
@@ -74,11 +80,7 @@ body {
 
 #maindiv p {
     font-family: 'Raleway', sans-serif;
-    font-size: 1.25em;
-}
 
-#maindiv table {
-    width: 75%;
 }
 
 td {
@@ -215,11 +217,6 @@ button {
     animation: 0.75s ease-in-out mousemove alternate infinite;
     bottom: 0;
     color: rgba(255, 255, 255,0.5);
-}
-
-#cursorAnim {
-    font-size: 0.7em;
-    color: rgba(0, 0, 0, 0.5)
 }
 
 /* los frames para el icono de cursor */
@@ -376,7 +373,7 @@ button {
 
 #mainmenu {
     height: 8%;
-    width: 100%;
+    width: 95%;
     z-index: 1500;
     position: absolute;
     bottom: 0;
@@ -401,4 +398,28 @@ button {
 #mainbutton:hover {
     background-color: rgba(0,0,0,0.5);
     cursor: pointer;
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  #maindiv h1 {
+    font-size: 2em;
+  }
+
+  #profilePic {
+    height: 10em;
+  }
+
+  #scrollable {
+    height: 90%;
+    overflow-y: scroll;
+  }
+
+  #right {
+    width: 10%;
+  }
+  #left {
+    width: 10%;
+  }
 }

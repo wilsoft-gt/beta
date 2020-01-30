@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Demo</title>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	    <meta name="description" content="Demo project">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+				height: auto;
+			}
+			.right {
+				position: fixed;
+				transition: 1s ease;
+				transform: translateX(100%);
+				background-color: rgba(225,0,0,0.2);
+			}
+
+			.left {
+				position: fixed;
+				transition: 1s ease;
+				transform: translateX(-100%);
+				background-color: rgba(0,0,255,0.2);
+			}
+
+			.main {
+				position: fixed;
+				top: 0;
+				bottom: 0;
+				transition: 1s ease;
+				background-color: rgba(0,255,0,0.2);
+			}
+		</style>
+		<script type="text/javascript">
+			function show(tochange) {
+				current = document.getElementById(tochange)
+				current.style.zIndex = "100";
+				current.style.opacity = "100";
+				current.style.transform = "translateX(0)"
+				items = document.getElementsByClassName('item')
+				console.log("The item is: "+tochange)
+				for (i of items){
+					if (i.id != tochange){
+						console.log("changing zIndex to: "+i.id)
+						i.style.zIndex = "0";
+						i.style.opacity = "0";
+						if (i.id == "left"){
+							i.style.transform = "translateX(-100%)"
+						} else if (i.id == "right"){
+							i.style.transform = "translateX(100%)"
+						} else {
+							i.style.transform = "translateY(-100%)"
+						}
+						
+					}
+				}
+			}
+
+
+		</script>
+	</head>
+	<body>
+		<div class="main item" id="main" style="color: green; overflow: auto">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<button onclick="show('left');">Left</button>
+			<button onclick="show('right');">Right</button>
+		</div>
+		<div class="left item" id="left" style="color: blue">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<button onclick="show('main');">main</button>
+			<button onclick="show('right');">Right</button>
+		</div>
+		<div class="right item" id="right" style="color: red">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+			<button onclick="show('main');">main</button>
+			<button onclick="show('left');">left</button>
+		</div>
+		<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+	</body>
+</html>
