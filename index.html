@@ -17,8 +17,7 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <!-- iconos de fontawesome -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/e4619561f0.js" crossorigin="anonymous"></script>
     <!-- animaciones de animate.js -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 
@@ -56,36 +55,6 @@
         </div>
     <div id="maindiv">
         <div id="scrollable">
-<!--             <p>####Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum. ######</p> -->
             <img id="profilePic" src="img/profile.jpg" alt="Perfil">
             <h1>wilson romero</h1>
             <!-- the span sirve para mostrar el texto creado por typed.js -->
@@ -126,17 +95,23 @@
         <div id="back1">
             <!-- Div en donde se encuentra un poco de informacion sobre mi pagina de arte -->
             <div id="back1Text">
-                <div id="artDescTextCont1">
-                    
-                    <h1><i class="fas fa-palette"></i>CG Design</h1>
-                    <p>Actualmente utilizo blender 3d para desarrollar modelos en 3d, ayudandome de algunas herramientas
-                        open source para texturizar los modelos. La mayoria de imagenes que he desarrollado son intentos
-                        de hacer algo fotorealista.</p>
+                <div id="leftShadow"></div>
+                <img id="frame" src="img/pantallablack.png">
+                <div id="lights">
+                    <div id="red"></div>
+                    <div id="green"></div>
+                </div>
+                <button onclick="shut()" id="shutDown"><i class="fas fa-power-off"></i></button>
+                <div id="pantallaBody">
+                    <img id="webImage" src="img/web_design_color.png" alt="web design">
+    <a href="wilsonromero.design/web" id="ir"><pre>&lt;a href="wilsonromero.design/web"&gt;
+    <b>Ir a mi pagina</b>
+&lt;/a&gt;</pre></a>
                 </div>
 
                 <!-- boton para enviarme al website de arte -->
-                <a onmouseover="buttonPlay()" href="https://www.wilsonromero.design" onclick=""
-                    class="waves-effect waves-light btn" style="float: left; background-color: rgb(55, 150, 131) !important;">View portfolio</a>
+                <!-- <a onmouseover="buttonPlay()" href="https://www.wilsonromero.design" onclick=""
+                    class="waves-effect waves-light btn" style="float: left; background-color: rgb(55, 150, 131) !important;">View portfolio</a> -->
             </div>
             <div id="mainColor1"></div>
             <div class="abup scrolling"></div>

@@ -121,9 +121,27 @@ function myf() {
 
 }
 
+function shut(){
+    checker = document.getElementById("pantallaBody")
+    if (window.getComputedStyle(checker).opacity == "1"){
+
+        document.getElementById("pantallaBody").style.opacity = "0";
+        document.getElementById("red").style.animationPlayState = "paused";
+        document.getElementById("red").style.backgroundColor = "rgb(0,0,0)";
+        document.getElementById("green").style.backgroundColor = "rgb(255,0,0)";
+    } else {
+        document.getElementById("pantallaBody").style.opacity = "1";
+        document.getElementById("red").style.animationPlayState = "running";
+        document.getElementById("red").style.backgroundColor = "rgb(255,0,0)";
+        document.getElementById("green").style.backgroundColor = "rgb(0,255,0)";
+    }
+}
+
 
 function rightDiv(){
     document.getElementById('back1').style.transform = 'translateX(0%)';
+    document.getElementById("back1Text").style.transform = "translateX(0%)"
+    document.getElementById("back1Text").style.opacity = "1";
     document.getElementById('back2').style.transform = 'translateX(0%)';
     document.getElementById('maindiv').style.transform = 'translateY(-100%)';
     document.getElementById('maindiv').style.opacity = 0;
@@ -137,6 +155,8 @@ function rightDiv(){
 
 function leftDiv(){
     document.getElementById('back1').style.transform = 'translateX(-100%)';
+    document.getElementById("back1Text").style.transform = "translateX(-100%)"
+    document.getElementById("back1Text").style.opacity = "0";
     document.getElementById('back2').style.transform = 'translateX(-100%)';
     document.getElementById('maindiv').style.transform = 'translateY(-100%)';
     document.getElementById('maindiv').style.opacity = 0;
@@ -149,6 +169,8 @@ function leftDiv(){
 
 function mainDiv(){
     document.getElementById('back1').style.transform = 'translateX(-50%)';
+    document.getElementById("back1Text").style.transform = "translateX(-100%)"
+    document.getElementById("back1Text").style.opacity = "0";
     document.getElementById('back2').style.transform = 'translateX(-50%)';
     document.getElementById('maindiv').style.transform = 'translateY(0%)';
     document.getElementById('maindiv').style.opacity = 1;
